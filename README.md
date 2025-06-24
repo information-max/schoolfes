@@ -194,17 +194,7 @@
         intro.classList.add("hidden");
         virusScreen.classList.remove("hidden");
 
-        // 全画面表示
-        const el = document.documentElement;
-        if (el.requestFullscreen) {
-          el.requestFullscreen();
-        } else if (el.webkitRequestFullscreen) {
-          el.webkitRequestFullscreen();
-        } else if (el.msRequestFullscreen) {
-          el.msRequestFullscreen();
-        }
-
-        // 音声読み上げ
+        // 読み上げ
         const msg = new SpeechSynthesisUtterance("警告！スマホがウィルスに感染しました。データが消去されます。");
         window.speechSynthesis.speak(msg);
 
@@ -213,7 +203,7 @@
           window.scrollBy(0, 10);
         }, 30);
 
-        // ポップアップ生成（最大50個）
+        // ランダムポップアップ（最大50個）
         let popupCount = 0;
         const maxPopups = 50;
         const popupInterval = setInterval(() => {
@@ -256,3 +246,10 @@
   </script>
 </body>
 </html>
+
+    #
+
+
+ 
+
+     
